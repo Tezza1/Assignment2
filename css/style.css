@@ -1,3 +1,14 @@
+/* ---------- WHOLE PAGE ---------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
 	margin-top: 0;
 	font-family: sans-serif;
@@ -7,16 +18,11 @@ body {
 /*  ---------HEADER STYLES ---------- */
 
 header {
-	z-index: 1;
+/* 	z-index: 1; */
 	background: url('https://d1nhn4igk64mvs.cloudfront.net/jumpchart/20140225/head_b.png') repeat center top;
 	height: 110px;
-	position: relative;
+/* 	position: relative; */
 	margin-top: 0;
-}
-
-#citySkyline {
-	max-height: 500px;
-	width: 100%
 }
 
 header h1 {
@@ -28,19 +34,21 @@ header h1 {
 
 .fa-spinner {
 	color: white;
+	font-size: 60px;
 	float: left;
 	padding: 0 0.5em;
 }
 
 .topOfPage {
 	display: inline-block;
-	width: 100%
+	width: 100%;
+	padding-top: 1.5em;
 }
 
 
 /* ---------- NAV STYLES ---------- */
 
-nav ul {
+nav {
 	float: right;
 }
 
@@ -87,9 +95,19 @@ nav a:visited {
 	top: 110px;
 }
 
+#citySkyline {
+	max-height: 500px;
+	width: 100%;
+	opacity: 0.9;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
 /* ---------- ARTICLE ---------- */
+
 article {
-	width: 60%;
+	width: 63%;
 	padding: 0 1.5em;
 	float: left;
 }
@@ -111,12 +129,14 @@ article p:first-letter {
 	font-family: 'Comfortaa', cursive;
 	width: 20%;
 	float: left;
-	margin: 0 0 0 1em;
+	margin: 0 1em;
 }
 
+
 /* ---------- FORM ----------*/
+
 form {
-	width: 30%;
+	width: 32%;
 	float: right;
  	margin: 1.5em;
 }
@@ -148,6 +168,16 @@ textarea {
 	margin-bottom: 1.5em;
 }
 
+input, textarea {
+	background: rgba(209,209,209,1);
+background: -moz-linear-gradient(left, rgba(209,209,209,1) 0%, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 49%, rgba(254,254,254,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(209,209,209,1)), color-stop(0%, rgba(226,226,226,1)), color-stop(49%, rgba(219,219,219,1)), color-stop(100%, rgba(254,254,254,1)));
+background: -webkit-linear-gradient(left, rgba(209,209,209,1) 0%, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 49%, rgba(254,254,254,1) 100%);
+background: -o-linear-gradient(left, rgba(209,209,209,1) 0%, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 49%, rgba(254,254,254,1) 100%);
+background: -ms-linear-gradient(left, rgba(209,209,209,1) 0%, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 49%, rgba(254,254,254,1) 100%);
+background: linear-gradient(to right, rgba(209,209,209,1) 0%, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 49%, rgba(254,254,254,1) 100%);
+}
+
 .radioButn {
 	width: 10%;
 }
@@ -161,7 +191,9 @@ button {
 	margin-bottom: 1em;
 }
 
+
 /* ---------- TABLE ---------- */
+
 .dataTable h3 {
 	font-family: 'Comfortaa', cursive;
 }
@@ -179,6 +211,13 @@ button {
 	margin: 0.5em;
 	border-bottom: 0.5px solid grey;
 }
+
+td a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
 
 /* ---------- FOOTER STYLES ---------- */
 
@@ -222,9 +261,7 @@ footer h6 {
 }
 
 .bottomFooter ul {
-	-webkit-column-count: 3;
-	/* Chrome, Safari, Opera */
-	-moz-column-count: 3;
-	/* Firefox */
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+	-moz-column-count: 3; /* Firefox */
 	column-count: 3;
 }
